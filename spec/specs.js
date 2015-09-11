@@ -13,6 +13,10 @@ describe('findReplace', function() {
   it("checks if a word can be replaced", function() {
     expect(findReplace("and go to the market")).to.equal("and go to the stadium");
   })
+
+  it("checks if a user can select a word in a sentence", function() {
+    expect(findReplace("and go to the market")).to.equal("market");
+  })
 })
 
 

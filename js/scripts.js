@@ -2,9 +2,9 @@ var inputSentence = function(input) {
   return input;
 }
 
-var findReplace = function(input) {
+var findReplace = function(word) {
   var altword = "and go to the stadium"
-  var altinput = input.replace(input, altword);
+  var altinput = word.replace(word, altword);
   return altinput;
 }
 
