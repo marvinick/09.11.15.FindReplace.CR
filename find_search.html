@@ -5,24 +5,35 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Pig Latin</title>
+    <title>Search and Replace</title>
   </head>
   <body>
     <div class="container">
-      <h1>Pig Latin</h1>
+      <h1>Search a word and replace it</h1>
 
-      <form id="pigLatin">
+      <form id="findReplace">
         <div class="form-group">
-          <label for="word">Enter a word:</label>
+          <label for="sentence">Enter a sentence:</label>
+          <input id="sentence" type="text">
+        </div>
+
+        <div class="form-group">
+          <label for="word">Enter a word to be replaced:</label>
           <input id="word" type="text">
         </div>
 
-        <button type="submit" class="btn btn-info btn-lg">Find out!</button>
-      </form>
+        <div class="form-group">
+          <label for="altWord">Enter an alternative word:</label>
+          <input id="altWord" type="text">
+        </div>
 
+        <button type="submit" id="submit_button" class="btn btn-info btn-lg">Find out!</button>
+      </form>
+      <br>
       <div id="result">
-        <p><span class="year"></span> is <span class="not"></span> a leap year.</p>
+        <p class="lead"><span class="result"></span></p>
       </div>
+
     </div>
   </body>
 </html>
