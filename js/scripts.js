@@ -2,13 +2,38 @@ var inputSentence = function(input) {
   return input;
 }
 
-var findReplace = function(word) {
-  var altword = "and go to the stadium"
-  var altinput = word.replace(word, altword);
-  return altinput;
-}
+var findReplace = function(sentence, word, altWord) {
+  var splitSentence = sentence.split(" ");
+  var re = /[\w+\s?,.!""]/ig;
+
+  for(var i=0; i < splitSentence.length; i++) {
+    if(splitSentence[i] === word) {
+      splitSentence[i] = altWord;
+    }
+  }
+  sentence = sentence.replace(re);
+  sentence = splitSentence.join(" ");
+  return sentence;
+};
+
+var findReplace = function(sentence, findWord, replaceWord) {
+  var splitString = sentence.split(" ");
+  var re = /[\w+\s?,.!""]/ig;
+
+  for(var i=0; i < splitString.length; i++) {
+    if(splitString[i] === findWord) {
+      splitString[i] = replaceWord;
+    }
+  }
+  sentence = sentence.replace(re);
+  sentence = splitString.join(" ");
+  return sentence;
+};
 
 
+
+// str = "Test abc test test abc test...".split("abc").join("");
+// str.split(search).join(replacement)
 
 
 // var romanNumeral = function(number) {
