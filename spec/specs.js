@@ -3,6 +3,10 @@ describe('findReplace', function() {
   it("checks if the user able to input a word", function() {
     expect(findReplace("and")).to.equal("and");
   })
+
+  it("checks if user is able to input a sentence", function() {
+    expect(findReplace("and go to the market")).to.equal("and go to the market");
+  })
 })
 
 
