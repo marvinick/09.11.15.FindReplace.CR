@@ -1,11 +1,17 @@
 
-describe('findReplace', function() {
+describe('inputSentence', function() {
   it("checks if the user able to input a word", function() {
-    expect(findReplace("and")).to.equal("and");
+    expect(inputSentence("and")).to.equal("and");
   })
 
   it("checks if user is able to input a sentence", function() {
-    expect(findReplace("and go to the market")).to.equal("and go to the market");
+    expect(inputSentence("and go to the market")).to.equal("and go to the market");
+  })
+})
+
+describe('findReplace', function() {
+  it("checks if a word can be replaced", function() {
+    expect(findReplace("and go to the market")).to.equal("and go to the stadium");
   })
 })
 

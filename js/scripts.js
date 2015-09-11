@@ -1,5 +1,11 @@
-var findReplace = function(input) {
+var inputSentence = function(input) {
   return input;
+}
+
+var findReplace = function(input) {
+  var altword = "and go to the stadium"
+  var altinput = input.replace(input, altword);
+  return altinput;
 }
 
 
